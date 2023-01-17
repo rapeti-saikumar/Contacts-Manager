@@ -1,13 +1,206 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: cursive;
+  box-sizing: border-box;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header section start */
+.HeaderContainer {
+  padding: 10px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.473);
 }
+
+/* Header section end*/
+
+/* Add Contact start */
+.AddContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 2;
+}
+.AddContact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.AddContact input {
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.644);
+  padding: 5px;
+}
+.button {
+  min-width: 100px;
+  font-weight: bold;
+  border: none;
+  background: rgb(37, 109, 243);
+  border-radius: 5px;
+
+  color: white;
+  padding: 7px;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+/* Add Contact end */
+
+/* ContactList start */
+
+.AddContactList .headerSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.AddContactList input {
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.644);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.AddContactList .ContactListEmail {
+  color: rgba(0, 0, 0, 0.479);
+}
+.AddContactList .items {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+.AddContactList .DeleteContactContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.473);
+  padding: 20px;
+  display: none;
+  background-color: white;
+  animation: newAnimation 0.3s linear;
+}
+@keyframes newAnimation {
+  0% {
+    opacity: 0.25%;
+  }
+  25% {
+    opacity: 0.5%;
+  }
+  50% {
+    opacity: 0.75%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.AddContactList .item {
+  border: solid 1px black;
+  border: none;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.473);
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+  /* display: none; */
+}
+.AddContactList .item .editContauner {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.AddContactList .item .editContauner:active {
+  color: darkgray;
+}
+.AddContactList .item .trashContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: red;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.AddContactList .item .trashIcon {
+  display: flex;
+  align-items: center;
+}
+.AddContactList .item .trashIcon:active {
+  transform: scale(0.9);
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.AddContactList .item .userIcon {
+  font-size: 35px;
+  margin: 0 10px;
+  color: rgb(0, 174, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddContactList .DeleteContactContainer .alert {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .AddContactList .items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .AddContactList .DeleteContactContainer .alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+/* ContactList end */
+.ContactDetails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.ContactDetails .ContactDetailCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.473);
+  background-color: rgb(213, 238, 250);
+  padding: 10px;
+}
+.ContactDetails .imgContainer {
+  font-size: 100px;
+  color: rgb(0, 174, 255);
+}
+
+.ContactDetails .ContactDetail {
+  text-align: center;
+}
+
+/* details section start */

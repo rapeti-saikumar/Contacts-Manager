@@ -1,0 +1,18 @@
+component - is a individual peace of re-usable code. which as ist own input,output, functionality.
+
+stroing andretriving from local storeage-->
+  useEffect(() => {
+    const retriveContacts = JSON.parse(localStorage.getItem(Key));
+    console.log(retriveContacts);
+    if (retriveContacts) setContacts(retriveContacts);
+  }, []);
+  useEffect(() => {
+    localStorage.setItem(Key, JSON.stringify(Contacts));
+  }, [Contacts]);
+
+
+  -->uniqueid
+import uuid from "react-uuid"; ->give an unique id
+
+-->including uuid
+setContacts([...Contacts, { id: uuid(), ...contact }]);
